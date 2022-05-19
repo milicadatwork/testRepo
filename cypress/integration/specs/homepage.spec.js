@@ -1,18 +1,17 @@
 
+import { HomePage } from "../../support/pageObjects/homepage.js";
+
 describe("First test suite", () => {
-    
+    const home = new HomePage();
     it("First test case", () => {
-        cy.visit('https://work.co/')
+        home.navigateTo()
     })
 
     it("Check page title", () => {
-        cy.get('[data-test-id="header-title-text"]')
-        .should('be.visible')
-        .should('have.text', 'We design and ship digital products that transform companies.')
+        home.getTitle()
     })
 
     it("Check logo is displayed", () => {
-        cy.get('[data-test-id="global-menu-btn"]')
-        .should('be.visible')
+        home.getLogo()
     })
 })
