@@ -2,8 +2,13 @@ export class HomePage {
     navigateTo(){
         cy.visit('https://work.co/')
     }
+
+    getPageTitle(){
+        cy.title()
+        .should('eq','Work & Co | Digital Product Agency')
+    }
     
-    getTitle(){
+    getHeadline(){
         
         cy.get('[data-test-id="header-title-text"]')
         .should('be.visible')

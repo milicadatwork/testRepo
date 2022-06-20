@@ -8,7 +8,11 @@ describe("First test suite", () => {
     })
 
     it("Check page title", () => {
-        home.getTitle()
+        home.getPageTitle()
+    })
+
+    it("Check headline", () => {
+        home.getHeadline()
     })
 
     it("Check logo is displayed", () => {
