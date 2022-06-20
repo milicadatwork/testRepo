@@ -33,3 +33,21 @@ describe("Second test suite", () => {
     })
 
 })
+
+describe("Third test suite", () => {
+    const home = new HomePage();
+    it("Third test case", () => {
+        home.navigateTo()
+    })
+    it("Click on W&C logo", () => {
+        home.clickLogo()
+    })
+    it("Click on Select CLients", () => {
+        home.clickSelectClients()
+    })
+
+    it("Check page URL clients", () => {
+        home.checkPageURL('https://work.co/clients/')
+    })
+
+})

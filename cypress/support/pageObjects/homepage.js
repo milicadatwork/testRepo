@@ -30,4 +30,10 @@ export class HomePage {
         .should('eq', url)
     }
 
+    clickSelectClients(){
+        cy.get('[data-test-id="grid-select-clients-link"]')
+        .should('be.visible')
+        .click();
+    }
+
 }
