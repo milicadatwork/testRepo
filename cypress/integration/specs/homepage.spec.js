@@ -19,3 +19,17 @@ describe("First test suite", () => {
         home.getLogo()
     })
 })
+
+describe("Second test suite", () => {
+    const home = new HomePage();
+    it("Second test case", () => {
+        home.navigateTo()
+    })
+    it("Click on W&C logo", () => {
+        home.clickLogo()
+    })
+    it("Check page URL grid", () => {
+        home.checkPageURL('https://work.co/grid/')
+    })
+
+})

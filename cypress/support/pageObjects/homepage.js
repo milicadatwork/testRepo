@@ -20,4 +20,14 @@ export class HomePage {
         .should('be.visible')
     }
 
+    clickLogo(){
+        cy.get('[data-test-id="global-menu-btn"]')
+        .click();
+    }
+
+    checkPageURL(url){
+        cy.url()
+        .should('eq', url)
+    }
+
 }
